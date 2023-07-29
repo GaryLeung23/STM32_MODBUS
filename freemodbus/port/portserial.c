@@ -59,12 +59,13 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
         //
 
         // MAX485_SetMode(MODE_SENT);
-
-        __HAL_UART_ENABLE_IT(&huart1, UART_IT_TXE);			// 使能发送为空中断
+//        __HAL_UART_ENABLE_IT(&huart1, UART_IT_TXE);
+        __HAL_UART_ENABLE_IT(&huart1, UART_IT_TC);			// 使能发送为空中断
     }
     else
     {
-        __HAL_UART_DISABLE_IT(&huart1, UART_IT_TXE);		// 禁能发送为空中断
+//        __HAL_UART_DISABLE_IT(&huart1, UART_IT_TXE);
+        __HAL_UART_DISABLE_IT(&huart1, UART_IT_TC);		// 禁能发送为空中断
     }
 }
 
@@ -74,6 +75,40 @@ xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
     /**
      * 已经设置串口参数
      */
+    //重新设置
+
+    huart1.Instance = USART1;
+    huart1.Init.BaudRate = ulBaudRate;
+    huart1.Init.StopBits = UART_STOPBITS_1;
+    huart1.Init.Mode = UART_MODE_TX_RX;
+    huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+    huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+    switch(eParity)
+    {
+        // 奇校验
+        case MB_PAR_ODD:
+            huart1.Init.Parity = UART_PARITY_ODD;
+            huart1.Init.WordLength = UART_WORDLENGTH_9B;			// 带奇偶校验数据位为9bits
+            break;
+
+            // 偶校验
+        case MB_PAR_EVEN:
+            huart1.Init.Parity = UART_PARITY_EVEN;
+            huart1.Init.WordLength = UART_WORDLENGTH_9B;			// 带奇偶校验数据位为9bits
+            break;
+
+            // 无校验
+        default:
+            huart1.Init.Parity = UART_PARITY_NONE;
+            huart1.Init.WordLength = UART_WORDLENGTH_8B;			// 无奇偶校验数据位为8bits
+            break;
+    }
+
+
+    if (HAL_UART_Init(&huart1) != HAL_OK)
+    {
+        return FALSE;
+    }
 
     return TRUE;
 }
@@ -85,7 +120,6 @@ xMBPortSerialPutByte( CHAR ucByte )
        * by the protocol stack if pxMBFrameCBTransmitterEmpty( ) has been
        * called. */
     HAL_UART_Transmit(&huart1, (uint8_t *) &ucByte, 1, HAL_MAX_DELAY);
-
     return TRUE;
 }
 
@@ -129,13 +163,10 @@ void USART1_IRQHandler(void)
 
         prvvUARTRxISR();//接受中断								// 通知modbus有数据到达
     }
-
-    if(__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_TXE)!=RESET)				// 发送为空中断标记被置位
+//  if(__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_TXE)!=RESET)
+    if(__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_TC)!=RESET)				// 发送为空中断标记被置位
     {
 
         prvvUARTTxReadyISR();//发送中断									// 通知modbus数据可以发松
     }
-
-    HAL_NVIC_ClearPendingIRQ(USART1_IRQn);
-    HAL_UART_IRQHandler(&huart1);
 }

@@ -36,7 +36,31 @@ xMBPortTimersInit( USHORT usTim1Timerout50us )
     /**
      * 已经设置TIM4
      */
+    //重新设置
+    TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+    TIM_MasterConfigTypeDef sMasterConfig = {0};
 
+    htim4.Instance = TIM4;
+    htim4.Init.Prescaler = 3600-1;
+    htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+    htim4.Init.Period = usTim1Timerout50us-1;
+    htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+    htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+    if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
+    {
+        return FALSE;
+    }
+    sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+    if (HAL_TIM_ConfigClockSource(&htim4, &sClockSourceConfig) != HAL_OK)
+    {
+        return FALSE;
+    }
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
+    {
+        return FALSE;
+    }
 
     return TRUE;
 }
@@ -77,13 +101,9 @@ static void prvvTIMERExpiredISR( void )
 //参考HAL_TIM_IRQHandler
 void TIM4_IRQHandler(void)
 {
-    if(__HAL_TIM_GET_FLAG(&htim4, TIM_FLAG_UPDATE) != RESET) // 检查定时器中断发生与否
+    if(__HAL_TIM_GET_IT_SOURCE(&htim4, TIM_IT_UPDATE) !=RESET) // 检查定时器更新中断是否使能
     {
-        if(__HAL_TIM_GET_IT_SOURCE(&htim4, TIM_IT_UPDATE) !=RESET) // 检查定时器更新中断是否使能
-        {
-            __HAL_TIM_CLEAR_IT(&htim4, TIM_IT_UPDATE);  // 清除定时器更新中断标志
-            prvvTIMERExpiredISR(  );                    // 通知modbus3.5个字符等待时间到
-        }
+        __HAL_TIM_CLEAR_IT(&htim4, TIM_IT_UPDATE);  // 清除定时器更新中断标志
+        prvvTIMERExpiredISR(  );                    // 通知modbus3.5个字符等待时间到
     }
-    HAL_TIM_IRQHandler(&htim4);
 }
