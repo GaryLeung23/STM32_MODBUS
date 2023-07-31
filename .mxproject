@@ -3,21 +3,23 @@ LibFiles=Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc.h;Drivers\STM32F1xx_
 
 [PreviousUsedSW4STM32Files]
 SourceFiles=..\Core\Src\main.c;..\Core\Src\gpio.c;..\Core\Src\rtc.c;..\Core\Src\tim.c;..\Core\Src\usart.c;..\Core\Src\stm32f1xx_it.c;..\Core\Src\stm32f1xx_hal_msp.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c;..\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\system_stm32f1xx.c;..\Core\Src\system_stm32f1xx.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c;..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c;..\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\system_stm32f1xx.c;..\Core\Src\system_stm32f1xx.c;;;
-HeaderPath=..\Drivers\STM32F1xx_HAL_Driver\Inc;..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy;..\Drivers\CMSIS\Device\ST\STM32F1xx\Include;..\Drivers\CMSIS\Include;..\Core\Inc;
+HeaderPath=..\Drivers\STM32F1xx_HAL_Driver\Inc;..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy;..\Drivers\CMSIS\Device\ST\STM32F1xx\Include;..\Drivers\CMSIS\Include;..\Middlewares\Third_Party\RealThread_RTOS\include\;..\Middlewares\Third_Party\RealThread_RTOS\bsp\_template\cubemx_config;..\Core\Inc;..\RT-Thread;
 CDefines=USE_HAL_DRIVER;STM32F103xE;USE_HAL_DRIVER;USE_HAL_DRIVER;
 
 [PreviousGenFiles]
 AdvancedFolderStructure=true
-HeaderFileListSize=7
+HeaderFileListSize=8
 HeaderFiles#0=G:/test_prj/STM32_MODBUS/Core/Inc/gpio.h
-HeaderFiles#1=G:/test_prj/STM32_MODBUS/Core/Inc/rtc.h
-HeaderFiles#2=G:/test_prj/STM32_MODBUS/Core/Inc/tim.h
-HeaderFiles#3=G:/test_prj/STM32_MODBUS/Core/Inc/usart.h
-HeaderFiles#4=G:/test_prj/STM32_MODBUS/Core/Inc/stm32f1xx_it.h
-HeaderFiles#5=G:/test_prj/STM32_MODBUS/Core/Inc/stm32f1xx_hal_conf.h
-HeaderFiles#6=G:/test_prj/STM32_MODBUS/Core/Inc/main.h
-HeaderFolderListSize=1
+HeaderFiles#1=G:/test_prj/STM32_MODBUS/RT-Thread/rtconfig.h
+HeaderFiles#2=G:/test_prj/STM32_MODBUS/Core/Inc/rtc.h
+HeaderFiles#3=G:/test_prj/STM32_MODBUS/Core/Inc/tim.h
+HeaderFiles#4=G:/test_prj/STM32_MODBUS/Core/Inc/usart.h
+HeaderFiles#5=G:/test_prj/STM32_MODBUS/Core/Inc/stm32f1xx_it.h
+HeaderFiles#6=G:/test_prj/STM32_MODBUS/Core/Inc/stm32f1xx_hal_conf.h
+HeaderFiles#7=G:/test_prj/STM32_MODBUS/Core/Inc/main.h
+HeaderFolderListSize=2
 HeaderPath#0=G:/test_prj/STM32_MODBUS/Core/Inc
+HeaderPath#1=G:/test_prj/STM32_MODBUS/RT-Thread
 HeaderFiles=;
 SourceFileListSize=7
 SourceFiles#0=G:/test_prj/STM32_MODBUS/Core/Src/gpio.c
@@ -30,4 +32,14 @@ SourceFiles#6=G:/test_prj/STM32_MODBUS/Core/Src/main.c
 SourceFolderListSize=1
 SourcePath#0=G:/test_prj/STM32_MODBUS/Core/Src
 SourceFiles=;
+
+[ThirdPartyIp]
+ThirdPartyIpNumber=1
+ThirdPartyIpName#0=RealThread.RT-Thread.3.1.5
+
+[ThirdPartyIp#RealThread.RT-Thread.3.1.5]
+include=Middlewares\Third_Party\RealThread_RTOS\include;
+sourceAsm=Middlewares\Third_Party\RealThread_RTOS\libcpu\arm\cortex-m3\context_rvds.S;
+header=Middlewares\Third_Party\RealThread_RTOS\bsp\_template\cubemx_config\rtconfig.h;
+source=Middlewares\Third_Party\RealThread_RTOS\src\clock.c;Middlewares\Third_Party\RealThread_RTOS\src\components.c;Middlewares\Third_Party\RealThread_RTOS\src\cpu.c;Middlewares\Third_Party\RealThread_RTOS\src\idle.c;Middlewares\Third_Party\RealThread_RTOS\src\ipc.c;Middlewares\Third_Party\RealThread_RTOS\src\irq.c;Middlewares\Third_Party\RealThread_RTOS\src\kservice.c;Middlewares\Third_Party\RealThread_RTOS\src\mem.c;Middlewares\Third_Party\RealThread_RTOS\src\memheap.c;Middlewares\Third_Party\RealThread_RTOS\src\mempool.c;Middlewares\Third_Party\RealThread_RTOS\src\object.c;Middlewares\Third_Party\RealThread_RTOS\src\scheduler.c;Middlewares\Third_Party\RealThread_RTOS\src\slab.c;Middlewares\Third_Party\RealThread_RTOS\src\thread.c;Middlewares\Third_Party\RealThread_RTOS\src\timer.c;Middlewares\Third_Party\RealThread_RTOS\libcpu\arm\cortex-m3\cpuport.c;Middlewares\Third_Party\RealThread_RTOS\bsp\_template\cubemx_config\board.c;
 

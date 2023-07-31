@@ -26,7 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
-#include "mb.h"
+#include "APP/app_rtthread.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -109,9 +109,9 @@ int main(void)
   MX_TIM4_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-//    printf("Hello World!\r\n");
-    eMBInit( MB_RTU, 0x01, 0, 9600, MB_PAR_NONE );
-    eMBEnable(  );
+
+  rtthread_startup();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -121,7 +121,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    eMBPoll();
+
   }
   /* USER CODE END 3 */
 }

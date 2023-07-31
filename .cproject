@@ -43,6 +43,12 @@
                   <listOptionValue builtIn="false" value="../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy" />
                   <listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F1xx/Include" />
                   <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../RT-Thread" />
+                  <listOptionValue builtIn="false" value="../Middlewares/Third_Party/RealThread_RTOS/include/" />
+                  <listOptionValue builtIn="false" value="../Middlewares/Third_Party/RealThread_RTOS/bsp/_template/cubemx_config" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
                 </option>
                 <option id="gnu.c.compiler.option.preprocessor.def.symbols.1066073161" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
                   <listOptionValue builtIn="false" value="USE_HAL_DRIVER" />
@@ -60,6 +66,12 @@
                   <listOptionValue builtIn="false" value="../Drivers/STM32F1xx_HAL_Driver/Inc" />
                   <listOptionValue builtIn="false" value="../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy" />
                   <listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F1xx/Include" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../RT-Thread" />
+                  <listOptionValue builtIn="false" value="../Middlewares/Third_Party/RealThread_RTOS/include/" />
+                  <listOptionValue builtIn="false" value="../Middlewares/Third_Party/RealThread_RTOS/bsp/_template/cubemx_config" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
                   <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
                 </option>
                 <option id="gnu.cpp.compiler.option.preprocessor.def.183268973" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -101,6 +113,8 @@
             </toolChain>
           </folderInfo>
           <sourceEntries>
+            <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="RT-Thread" />
+            <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares" />
             <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup" />
             <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers" />
             <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core" />
@@ -150,6 +164,12 @@
                   <listOptionValue builtIn="false" value="../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy" />
                   <listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F1xx/Include" />
                   <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../RT-Thread" />
+                  <listOptionValue builtIn="false" value="../Middlewares/Third_Party/RealThread_RTOS/include/" />
+                  <listOptionValue builtIn="false" value="../Middlewares/Third_Party/RealThread_RTOS/bsp/_template/cubemx_config" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
                 </option>
                 <option id="gnu.c.compiler.option.preprocessor.def.symbols.1066073161" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
                   <listOptionValue builtIn="false" value="USE_HAL_DRIVER" />
@@ -167,6 +187,12 @@
                   <listOptionValue builtIn="false" value="../Drivers/STM32F1xx_HAL_Driver/Inc" />
                   <listOptionValue builtIn="false" value="../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy" />
                   <listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F1xx/Include" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../RT-Thread" />
+                  <listOptionValue builtIn="false" value="../Middlewares/Third_Party/RealThread_RTOS/include/" />
+                  <listOptionValue builtIn="false" value="../Middlewares/Third_Party/RealThread_RTOS/bsp/_template/cubemx_config" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
+                  <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
                   <listOptionValue builtIn="false" value="../Drivers/CMSIS/Include" />
                 </option>
                 <option id="gnu.cpp.compiler.option.preprocessor.def.symbols.1071982681" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -208,6 +234,8 @@
             </toolChain>
           </folderInfo>
           <sourceEntries>
+            <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="RT-Thread" />
+            <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares" />
             <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup" />
             <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers" />
             <entry excluding="" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core" />
