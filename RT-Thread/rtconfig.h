@@ -12,15 +12,15 @@
 
 // <o>OS tick per second
 //  <i>Default: 1000   (1ms)
-#define RT_TICK_PER_SECOND 1000
+#define RT_TICK_PER_SECOND 10000
 
 // <o>Alignment size for CPU architecture data access
 //  <i>Default: 4
-#define RT_ALIGN_SIZE 4
+#define RT_ALIGN_SIZE 8
 
 // <o>the max length of object name<2-16>
 //  <i>Default: 8
-#define RT_NAME_MAX 8
+#define RT_NAME_MAX 16
 
 // <c1>Using RT-Thread components initialization
 //  <i>Using RT-Thread components initialization
@@ -88,12 +88,12 @@
 
 // <c1>Using Mutex
 //  <i>Using Mutex
-//#define RT_USING_MUTEX
+#define RT_USING_MUTEX
 // </c>
 
 // <c1>Using Event
 //  <i>Using Event
-//#define RT_USING_EVENT
+#define RT_USING_EVENT
 // </c>
 
 // <c1>Using MailBox
